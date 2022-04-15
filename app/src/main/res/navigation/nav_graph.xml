@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+             xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/listNoteFragment">
+
+    <fragment
+        android:id="@+id/listNoteFragment"
+        android:name="com.example.retrofityt.ui.auth.listNote.ListNoteFragment"
+        android:label="ListNoteFragment" >
+        <action
+            android:id="@+id/action_listNoteFragment_to_addFragment"
+            app:destination="@id/addFragment" />
+        <action
+            android:id="@+id/action_listNoteFragment_to_updateNoteFragment"
+            app:destination="@id/updateNoteFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/addFragment"
+        android:name="com.example.retrofityt.ui.auth.addNote.AddFragment"
+        android:label="fragment_add"
+        tools:layout="@layout/fragment_add" >
+        <argument
+            android:name="idTest"
+            app:argType="integer" />
+    </fragment>
+    <fragment
+        android:id="@+id/updateNoteFragment"
+        android:name="com.example.retrofityt.ui.auth.updateNote.UpdateNoteFragment"
+        android:label="UpdateNoteFragment" />
+
+</navigation>
